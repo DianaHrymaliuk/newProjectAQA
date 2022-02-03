@@ -3,7 +3,7 @@ package lesson1;
 public class HomeWorkApp {
     public static void main(String [] args){
         printThreeWords();
-        chackSumSing();
+        chackSumSign();
         printColor();
         compareNumbers();
     }
@@ -12,7 +12,7 @@ public class HomeWorkApp {
         System.out.println("Banana");
         System.out.println("Apple");
     }
-    public static void chackSumSing(){
+    public static void chackSumSign(){
         int a = -6;
         int b = 6;
         int c = a+b;
