@@ -26,13 +26,13 @@ public class HomeWorkApp {
     public static void printColor() {
         int i = -20;
         if (i <= 0) {
-            System.out.println("Красний");
+            System.out.println("Красный");
         }
         else if (i >= 1 && i<=100) {
-            System.out.println("Зелений");
+            System.out.println("Зеленый");
         }
         else {
-            System.out.println("Желтий");
+            System.out.println("Желтый");
         }
     }
     public static void compareNumbers() {
