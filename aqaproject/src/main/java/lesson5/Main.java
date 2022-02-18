@@ -15,23 +15,27 @@ public class Main {
         Box<Apple> box2 = new Box();
         Box<Apple> box3 = new Box();
         Box<Apple> box4 = new Box(); // пустой для проверки
-        box1.addFruit(new Orange());
-        box1.addFruit(new Orange());
-        box1.addFruit(new Orange());
-        box2.addFruit(new Apple());
-        box2.addFruit(new Apple());
-        box2.addFruit(new Apple());
+
+        for (int i = 0; i < 3; i++) {
+            box1.addFruit(new Orange());
+        }
+        for (int i = 0; i < 6; i++) {
+            box2.addFruit(new Apple());}
+
+
         box3.addFruit(new Apple());
         box3.addFruit(new Apple());
 
 
         System.out.println("Weight of the Box1 " + box1.getWeight());
         System.out.println("Weight of the Box2 " + box2.getWeight());
+        System.out.println("Weight of the Box3 " + box3.getWeight());
 
         System.out.println(box1.compare(box2));
 
 //        box4.sprinkle(box3);
 //        box1.sprinkle(box2);
+//        box2.sprinkle(box3);
 
         System.out.println("Weight of the Box4 " + box4.getWeight());
 
