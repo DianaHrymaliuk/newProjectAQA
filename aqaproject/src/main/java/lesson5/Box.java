@@ -40,12 +40,13 @@ public class Box<T extends Fruit> {
     }
 
 //    public void sprinkle(Box<? extends Fruit> box1) {
-//    if (box1.box.get(0).equals(this.box.get(0)) {
-//    System.out.println("The fruits of one type in the boxes");
-//    box1.box.addAll(this.box);
-//    clear();
-//    } else
-//         System.out.println("The fruits of different types in the boxes");
+//        if (this.box.isEmpty() || box1.box.get(0).equals(this.box.get(0))) {
+//        System.out.println("The fruits of one type in the boxes");
+//        //box1.box.addAll(this.box);
+//        //clear();
+//        }
+//        else{
+//         System.out.println("The fruits of different types in the boxes");}
 //    }
 }
 

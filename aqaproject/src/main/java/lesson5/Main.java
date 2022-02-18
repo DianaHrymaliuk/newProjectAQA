@@ -30,7 +30,6 @@ public class Main {
 
         System.out.println(box1.compare(box2));
 
-//        box3.sprinkle(box2);
 //        box4.sprinkle(box3);
 //        box1.sprinkle(box2);
 
