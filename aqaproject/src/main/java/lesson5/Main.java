@@ -20,7 +20,8 @@ public class Main {
             box1.addFruit(new Orange());
         }
         for (int i = 0; i < 6; i++) {
-            box2.addFruit(new Apple());}
+            box2.addFruit(new Apple());
+        }
 
 
         box3.addFruit(new Apple());
@@ -46,6 +47,5 @@ public class Main {
         arr[a] = arr[b];
         arr[b] = t;
     }
-
 }
 
