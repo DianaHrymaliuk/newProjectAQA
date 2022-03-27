@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: TriangleTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.155 s <<< FAILURE! - in TriangleTest
+TriangleTest.tr_equals  Time elapsed: 0.063 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <51.521233486786784> but was: <72.30793524918272>
+	at TriangleTest.tr_equals(TriangleTest.java:36)
+
+TriangleTest.sqr1  Time elapsed: 0.006 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <true> but was: <false>
+	at TriangleTest.sqr1(TriangleTest.java:20)
+
