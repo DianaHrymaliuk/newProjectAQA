@@ -3,7 +3,9 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 
+
 public class TriangleTest {
+
     Triangle triangle = new Triangle(11, 12, 10);
     Triangle triangle2 = new Triangle(-10, 10, 13);
     Triangle triangle3 = new Triangle(13, 14, 12);
