@@ -1,18 +1,31 @@
 package lesson12;
 
 public class Triangle {
-    public static void sqr(int a, int b, int c) {
-        double s;
-        if (a <= 0 || b <= 0 || c <= 0) {
-            System.out.println("Значения не могут быть отрицательними!!");
-        } else {
-            double p = (a + b + c) / 2.0;
-            s = Math.sqrt((p * (p - a) * (p - b) * (p - c)));
-            System.out.println(s);
-        }
+
+    int a;
+    int b;
+    int c;
+    public  Triangle (int a, int b, int c){
+        this.a=a;
+        this.b=b;
+        this.c=c;
     }
 
-    public static void main(String[] args) {
-        sqr(11,12,10);
+    public static double sqr(Object o) {
+        double s = 0;
+        Triangle triangle = (Triangle) o;
+        if (triangle.a <= 0 || triangle.b <= 0 || triangle.c <= 0) {
+            System.out.println("Значения не могут быть отрицательними!!");
+        } else {
+            double p = (triangle.a + triangle.b + triangle.c) / 2.0;
+            s = Math.sqrt((p * (p - triangle.a) * (p - triangle.b) * (p - triangle.c)));
+            System.out.println( "Площадь треугольника равна "+ s + " cm");
+        }
+        return s;
     }
+
+//    public static void main(String[] args) {
+//        Triangle triangle1= new Triangle(12,11,13);
+//        sqr(triangle1);
+//    }
 }
