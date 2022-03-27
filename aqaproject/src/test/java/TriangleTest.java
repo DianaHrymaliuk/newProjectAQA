@@ -28,6 +28,7 @@ public class TriangleTest {
     @Test
     public void not_null() {
         Assertions.assertNotNull(Triangle.sqr(triangle));
+        Assertions.assertNotNull(Triangle.sqr(triangle3));
     }
 
     @Test
