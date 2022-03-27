@@ -1,14 +1,14 @@
 package i_ua;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Test {
     ChromeDriver driver;
 
-    @org.junit.Test
+    @org.junit.jupiter.api.Test
     public void test1() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
@@ -22,7 +22,7 @@ public class Test {
         driver.findElement(By.xpath("//textarea[@id='text']")).sendKeys("Hello!");
         driver.findElement(By.xpath("//input[@tabindex='12']")).click();
         String text = driver.findElement(By.xpath("//div[contains(text(),'Лист успішно відправлено адресатам')]")).getText();
-        Assert.assertEquals("Лист успішно відправлено адресатам", text);
+        Assertions.assertEquals("Лист успішно відправлено адресатам", text);
         System.out.println(text);
         driver.quit();
     }
