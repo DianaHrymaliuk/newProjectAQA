@@ -15,7 +15,7 @@ public class Test {
         driver.get("https://www.i.ua");
         driver.findElement(By.xpath("//input[@name='login']")).sendKeys("test.user");
         driver.findElement(By.xpath("//input[@name='pass']")).sendKeys("1234567890zz");
-        driver.findElement(By.xpath("//input[@@tabindex='5']")).click();
+        driver.findElement(By.xpath("//input[@tabindex='5']")).click();
         driver.findElement(By.xpath("(//a[contains(text(),'Створити листа')])[2]")).click(); // после входа в аккаунт, есть только украинский, поэтому xpath не должен меняться
         driver.findElement(By.xpath("//textarea[@id='to']")).sendKeys("diana.hrymaliuk@gmail.com");
         driver.findElement(By.xpath("//input[@name='subject']")).sendKeys("test mail");
