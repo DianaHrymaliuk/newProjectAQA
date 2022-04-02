@@ -29,7 +29,7 @@ public class TestUI {
     public void background_color() {
         //driver.findElement(By.xpath("//a[@class='MainNav-module--link--HnRAu MainNav-module--indexPage--RWmzP']")).click();
         WebElement a = driver.findElement(By.xpath("//section[@id='experts']/div/div/div[5]"));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = driver;
         js.executeScript("arguments[0].scrollIntoView();", a);
         driver.findElement(By.xpath("//section[@id='experts']/div/div/div[5]")).click();
         String color = driver.findElement(By.xpath("//section[@id='experts']/div/div/div[5]")).getCssValue("background-color");
@@ -41,7 +41,7 @@ public class TestUI {
     @Test
     public void skype_icon() {
         WebElement b = driver.findElement(By.xpath("//a[normalize-space()='skype']"));
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+        JavascriptExecutor js = driver;
         js.executeScript("arguments[0].scrollIntoView();", b);
         driver.findElement(By.xpath("//a[normalize-space()='skype']")).click();
         List<String> windowHandles = new ArrayList(driver.getWindowHandles());
