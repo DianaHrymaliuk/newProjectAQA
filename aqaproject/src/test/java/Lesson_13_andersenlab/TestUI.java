@@ -25,7 +25,7 @@ public class TestUI {
         driver.get("https://andersenlab.com/");
     }
 
-    @Test
+    @Test //Проверка на изменение цвета при нажатии на кнопку QA в секции Experts
     public void background_color() {
         //driver.findElement(By.xpath("//a[@class='MainNav-module--link--HnRAu MainNav-module--indexPage--RWmzP']")).click();
         WebElement a = driver.findElement(By.xpath("//section[@id='experts']/div/div/div[5]"));
