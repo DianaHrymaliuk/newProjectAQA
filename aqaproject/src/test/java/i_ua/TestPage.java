@@ -6,12 +6,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+import java.util.Properties;
 
 public class TestPage {
 
     private ChromeDriver driver;
-
-
     private final String loginField = "//input[@name='login']";
     private final String passField = "//input[@name='pass']";
     private final String logInButtonXpath = "//input[@tabindex='5']";
@@ -24,9 +23,12 @@ public class TestPage {
     public TestPage(ChromeDriver driver) {
         this.driver = driver;
     }
+    Properties prop = new Properties();
 
     public TestPage fillLoginField() {
         driver.findElement(By.xpath(loginField)).sendKeys("test.user");
+        //driver.findElement(By.xpath(loginField)).sendKeys(prop.getProperty("login"));
+        //driver.findElement(By.xpath(loginField)).sendKeys(User.getUser().login);
         return this;
     }
 
