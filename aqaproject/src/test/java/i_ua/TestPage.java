@@ -19,6 +19,7 @@ public class TestPage {
     private final String mailToFieldXpath = "//textarea[@id='to']";
     private final String mailSubjectXpath = "//input[@name='subject']";
     private final String mailTextXpath = "//textarea[@id='text']";
+    //public String actualTextXpath = "//div[contains(text(),'Лист успішно відправлено адресатам')]";
 
     public TestPage(ChromeDriver driver) {
         this.driver = driver;
@@ -59,4 +60,5 @@ public class TestPage {
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(sendMailButtonXpath)))).click();
         return this;
     }
+
 }
