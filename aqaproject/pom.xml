@@ -8,8 +8,8 @@
     <artifactId>lesson-1</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <aspectj.version>1.8.10</aspectj.version>
         <allure-junit5.version>2.6.0</allure-junit5.version>
         <junit-platform-surefire-provider.version>1.1.0</junit-platform-surefire-provider.version>
@@ -34,18 +34,24 @@
             <version>4.1.2</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>LATEST</version>
-            <scope>test</scope>
-        </dependency>
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/ch.qos.logback/logback-classic &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>LATEST</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
             <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
@@ -75,7 +81,7 @@
                 <dependency>
                     <groupId>org.junit.platform</groupId>
                     <artifactId>junit-platform-surefire-provider</artifactId>
-                    <version>${junit-platform-surefire-provider.version}</version>
+                    <version>1.1.0</version>
                 </dependency>
                 <dependency>
                     <groupId>org.aspectj</groupId>
@@ -84,28 +90,28 @@
                 </dependency>
             </dependencies>
             </plugin>
-            <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.12</version>
-            </plugin>
-            <plugin>
-                <artifactId>maven-surefire-report-plugin</artifactId>
-                <version>3.0.0-M5</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <artifactId>maven-failsafe-plugin</artifactId>-->
+<!--                <version>2.12</version>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <artifactId>maven-surefire-report-plugin</artifactId>-->
+<!--                <version>3.0.0-M5</version>-->
+<!--            </plugin>-->
             <!-- Лечение проблемы для mvn site: A required class was missing while
         executing org.apache.maven.plugins:maven-site-plugin:3.3:site:
         org/apache/maven/doxia/siterenderer/DocumentContent-->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-site-plugin</artifactId>
-                <version>3.7.1</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-site-plugin</artifactId>-->
+<!--                <version>3.7.1</version>-->
+<!--            </plugin>-->
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-project-info-reports-plugin</artifactId>
-                <version>3.0.0</version>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-project-info-reports-plugin</artifactId>-->
+<!--                <version>3.0.0</version>-->
+<!--            </plugin>-->
 
             <plugin>
                 <groupId>io.qameta.allure</groupId>
