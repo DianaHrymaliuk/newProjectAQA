@@ -45,10 +45,10 @@ public class TestUI {
         js.executeScript("arguments[0].scrollIntoView();", b);
         driver.findElement(By.xpath("//a[normalize-space()='skype']")).click();
         List<String> windowHandles = new ArrayList(driver.getWindowHandles());
-        String secondTab = windowHandles.get(1);
-        driver.switchTo().window(secondTab);
-        String c = driver.getCurrentUrl();
-        Assertions.assertEquals("https://join.skype.com/aM8R4P4dNJdy", c);
+        //String secondTab = windowHandles.get(1);
+        driver.switchTo().window(windowHandles.get(1));
+        String actual_URL = driver.getCurrentUrl();
+        Assertions.assertEquals("https://join.skype.com/aM8R4P4dNJdy", actual_URL);
         driver.close();
     }
 }
