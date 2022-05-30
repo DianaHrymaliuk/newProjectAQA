@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Assertions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
+
 import static i_ua.Constants.BASE_URL;
 
 public class Test {
@@ -14,6 +16,7 @@ public class Test {
     public void test() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
+        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.get(BASE_URL);
         new TestPage(driver)
                 .fillLoginField()

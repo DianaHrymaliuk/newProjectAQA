@@ -56,7 +56,7 @@ public class TestPage {
     }
 
     public TestPage clickSendMassage() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10, 1));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(sendMailButtonXpath)))).click();
         return this;
     }
