@@ -16,17 +16,19 @@ public class Test {
     public void test() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
         driver.get(BASE_URL);
         new TestPage(driver)
                 .fillLoginField()
                 .fillPassField()
-                .clickLogIn()
-                .clickNewMassage()
-                .mail()
-                .clickSendMassage();
-        String text = driver.findElement(By.xpath("//div[contains(text(),'Лист успішно відправлено адресатам')]")).getText();
-        Assertions.assertEquals("Лист успішно відправлено адресатам", text);
+                .clickLogIn();
+                //.clickNewMassage()
+                //.mail()
+                //.clickSendMassage();
+        //String text = driver.findElement(By.xpath("//div[contains(text(),'Лист успішно відправлено адресатам')]")).getText();
+        //Assertions.assertEquals("Лист успішно відправлено адресатам", text);
+        String text = driver.findElement(By.xpath("//span[@class='sn_menu_title']")).getText();
+        Assertions.assertEquals(text, "test.user@i.ua");
         System.out.println(text);
         driver.quit();
     }
