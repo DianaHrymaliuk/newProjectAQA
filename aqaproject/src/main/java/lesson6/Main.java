@@ -11,17 +11,20 @@ public class Main {
         try {
             System.out.println("Cумма елементов массива равна "+ ex(arr1));
         } catch (MyArraySizeException | MyArrayDataException e) {
-            e.printStackTrace();
+            e.getMessage();
+            //e.printStackTrace();
         }
         try {
             System.out.println("Cумма елементов массива равна "+ ex(arr2));
         } catch (MyArraySizeException | MyArrayDataException e) {
-            e.printStackTrace();
+            e.getMessage();
+            //e.printStackTrace();
         }
         try {
             System.out.println("Cумма елементов массива равна "+ ex(arr3));
         } catch (MyArraySizeException | MyArrayDataException e) {
-            e.printStackTrace();
+            e.getMessage();
+            //e.printStackTrace();
         }
     }
 
@@ -37,7 +40,7 @@ public class Main {
             for (int j = 0; j < arr.length; j++) {
                 try {
                     res += Integer.parseInt(arr[i][j]);
-                } catch (NumberFormatException e) {
+                } catch (Exception e) {
                     throw new MyArrayDataException(i, j);
                 }
             }
@@ -46,13 +49,15 @@ public class Main {
     }
 
     private static class MyArraySizeException extends Exception {
+        //constr
         public MyArraySizeException() {
-            super("Неверный размер массива");
+            System.err.println("Неверный размер массива");
         }
     }
     private static class MyArrayDataException extends Exception {
+        //constr
         public MyArrayDataException(int i, int j) {
-            super("Неверный формат данных елемента массива: строка: " + i + ", столбец: " + j);
+            System.err.println("Неверный формат данных елемента массива: строка: " + i + ", столбец: " + j);
         }
     }
 }
