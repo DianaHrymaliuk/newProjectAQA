@@ -9,6 +9,8 @@ public class Smth {
         for (int i = 0; i < 4; i++) {
             str1("Smth");
         }
+        String a = "JAAAAVA";
+        reve(a);
 
         int arr1 [] = {1,2,5,1,10,3};
         String str2 [] = {"n", "a", "c", "b"};
@@ -69,6 +71,10 @@ public class Smth {
         System.out.println("min: "+ min);
         System.out.println("avg: "+ avg);
         System.out.println("sum: "+ sum);
+    }
+    public static void reve(String str){
+        StringBuilder stringBuilder = new StringBuilder(str);
+        System.out.println(stringBuilder.reverse());
     }
 }
 
