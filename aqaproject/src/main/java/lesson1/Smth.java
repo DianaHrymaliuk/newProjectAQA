@@ -10,13 +10,13 @@ public class Smth {
             str1("Smth");
         }
 
-        int arr1 [] = {4,2,5,1,10};
+        int arr1 [] = {1,2,5,1,10,3};
         String str2 [] = {"n", "a", "c", "b"};
         seredynaMasyvu(arr1);
         maxMinAvg(arr1);
 
-        Arrays.sort(arr1);
-        System.out.println("Метод сорт " + Arrays.toString(arr1));
+        //Arrays.sort(arr1);
+        //System.out.println("Метод сорт " + Arrays.toString(arr1));
 
         bubbleSort(arr1);
         System.out.println(arr1[0]);
