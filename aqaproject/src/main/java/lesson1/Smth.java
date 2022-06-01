@@ -11,18 +11,22 @@ public class Smth {
         }
         String a = "JAAAAVA";
         reve(a);
+        int num = 12322222;
 
-        int arr1 [] = {1,2,5,1,10,3};
-        String str2 [] = {"n", "a", "c", "b"};
+        int arr1[] = {1, 2, 5, 1, 10, 3};
+        int arr2[] = {1, 6, 5, 1, 10, 3};
+        String str2[] = {"n", "a", "c", "b"};
         seredynaMasyvu(arr1);
         maxMinAvg(arr1);
-
+        returnReversArray(arr1);
+        int length = String.valueOf(num).length();
+        System.out.println(length);
         //Arrays.sort(arr1);
         //System.out.println("Метод сорт " + Arrays.toString(arr1));
 
         bubbleSort(arr1);
         System.out.println(arr1[0]);
-        System.out.println(arr1[arr1.length-1]);
+        System.out.println(arr1[arr1.length - 1]);
         Arrays.sort(str2);
         System.out.println(Arrays.toString(str2));
     }
@@ -36,46 +40,61 @@ public class Smth {
     public static void str1(String str) {
         System.out.println(str);
     }
-    public static void bubbleSort(int [] arr){
-        for (int i= arr.length-1; i>0; i--){
-            for (int j =0; j<i;j++){
-                if (arr[j]>arr[j+1]){
-                    int tmp = arr [j];
-                    arr[j] = arr[j+1];
-                    arr[j+1]=tmp;
+
+    public static void bubbleSort(int[] arr) {
+        for (int i = arr.length - 1; i > 0; i--) {
+            for (int j = 0; j < i; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    int tmp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = tmp;
                 }
             }
         }
         System.out.println("Метод бульбашки " + Arrays.toString(arr));
     }
-    public static void seredynaMasyvu(int [] arr){
+
+    public static void seredynaMasyvu(int[] arr) {
         int a = arr.length / 2;
         System.out.println(arr[a]);
     }
-    public static void maxMinAvg(int [] arr){
+
+    public static void maxMinAvg(int[] arr) {
         int max = arr[0];
         int min = arr[0];
         int sum = 0;
-        for (int i=0; i<arr.length; i++){
-            if(max < arr[i])
+        for (int i = 0; i < arr.length; i++) {
+            if (max < arr[i])
                 max = arr[i];
-            if(min > arr[i])
+            if (min > arr[i])
                 min = arr[i];
         }
-        for ( int i = 0; i<arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             sum += arr[i];
 
         }
-        int avg = sum/arr.length;
-        System.out.println("max: "+ max);
-        System.out.println("min: "+ min);
-        System.out.println("avg: "+ avg);
-        System.out.println("sum: "+ sum);
+        int avg = sum / arr.length;
+        System.out.println("max: " + max);
+        System.out.println("min: " + min);
+        System.out.println("avg: " + avg);
+        System.out.println("sum: " + sum);
     }
-    public static void reve(String str){
+
+    public static void reve(String str) {
         StringBuilder stringBuilder = new StringBuilder(str);
         System.out.println(stringBuilder.reverse());
     }
+
+    static void returnReversArray(int[] arr) {
+        int temp;
+        for (int i = arr.length - 1, j = 0; i >= arr.length / 2; i--, j++) {
+            temp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = temp;
+        }
+        System.out.println(Arrays.toString(arr));
+    }
 }
+
 
 
